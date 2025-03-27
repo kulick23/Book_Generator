@@ -1,0 +1,17 @@
+{
+  "title": "Book Generator",
+  "region": "Region",
+  "likes": "Average likes per book",
+  "reviews": "Average reviews per book",
+  "export": "Export to",
+  "table": "Table",
+  "gallery": "Gallery",
+  "details": "Book Details",
+  "close": "Close",
+  "random": "Random",
+  "name": "Name",
+  "author": "Author(s)",
+  "publishing": "Publishing",
+  "likesCount": "Likes",
+  "reviewsCount": "Reviews"
+}

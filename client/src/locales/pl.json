@@ -1,0 +1,17 @@
+{
+  "title": "Generator książek",
+  "region": "Region",
+  "likes": "Średnia liczba polubień na książkę",
+  "reviews": "Średnia liczba recenzji na książkę",
+  "export": "Eksportuj do",
+  "table": "Tabela",
+  "gallery": "Galeria",
+  "details": "Szczegóły książki",
+  "close": "Zamknij",
+  "random": "Losowy",
+  "name": "Nazwa",
+  "author": "Autor(ski)",
+  "publishing": "Wydawnictwo",
+  "likesCount": "Upodobania",
+  "reviewsCount": "Recenzje"
+}

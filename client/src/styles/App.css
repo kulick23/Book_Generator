@@ -1,0 +1,261 @@
+:root {
+  --background-color: black;
+  --black-color: #080808;
+}
+
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  color: white;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 76.875rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+  background-color: var(--background-color);
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+li {
+  font-size: 1.125rem;
+}
+
+small {
+  font-size: 1.1875rem;
+  color: rgba(189, 189, 189, 1);
+}
+.input,
+select {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  white-space: nowrap;
+  font-size: 1.125rem;
+  display: flex;
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  &:hover {
+    background-color: white;
+    color: var(--background-color);
+    img {
+      filter: brightness(0);
+    }
+  }
+}
+
+textarea {
+  padding-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 3px;
+  border: 1px solid rgba(215, 215, 215, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    content: '✓';
+    position: absolute;
+    top: -8px;
+    left: 2px;
+    display: inline-block;
+    color: green;
+    font-size: 14px;
+    line-height: 30px;
+    transform: scale(0);
+    transition: 0.3s;
+  }
+
+  &:checked {
+    background-color: transparent;
+
+    &:after {
+      transform: scale(1);
+    }
+  }
+}
+
+.language-switcher {
+  display: flex;
+  gap: 1rem;
+  justify-self: flex-end;
+  flex-wrap: wrap;
+}
+.selectedBookModal__button {
+  display: flex;
+  justify-self: center;
+}
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+.margin-top {
+  margin-top: 1rem;
+}
+.likes {
+  display: inline-block;
+  width: 20px;
+  text-align: left;
+}
+.pointer {
+  cursor: pointer;
+}
+.selectedBook {
+  border: 1px solid #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.selectedBookModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectedBookModalContent {
+  background-color: var(--background-color);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.gallery {
+  margin: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.gallery-img {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+  display: flex;
+  justify-self: center;
+}
+.gallery-text {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+table {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: transparent;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --component-margin: 7.5rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+  .gallery-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 655px) {
+  :root {
+    --component-margin: 5rem;
+    --arrow-height: 0.7rem;
+  }
+  button {
+    font-size: 0.875rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+  small {
+    font-size: 0.875rem;
+  }
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
