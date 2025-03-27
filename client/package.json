@@ -16,6 +16,7 @@
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
     "papaparse": "^5.5.2",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-csv": "^2.2.2",
     "react-dom": "^19.0.0",
