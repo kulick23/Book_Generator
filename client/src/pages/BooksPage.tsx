@@ -43,8 +43,9 @@ const BooksPage: React.FC = () => {
   const fetchBooks = useCallback(
     async (currentBatch: number, reset: boolean = false) => {
       try {
+        const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
         const response = await axios.get<Book[]>(
-          `http://localhost:3001/api/books?seed=${seed}&batch=${currentBatch}&region=${region}&likes=${likes}&reviews=${reviews}`,
+          `${apiUrl}/api/books?seed=${seed}&batch=${currentBatch}&region=${region}&likes=${likes}&reviews=${reviews}`,
         );
         const newBooks = response.data;
 
