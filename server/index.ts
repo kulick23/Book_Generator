@@ -36,8 +36,10 @@ app.get('/api/books', (req: Request, res: Response) => {
   faker.seed(combinedSeed);
 
   const recordCount = batch === 1 ? 20 : 10;
+  const baseOffset = batch === 1 ? 0 : 20 + (batch - 2) * 10;
+
   const books = Array.from({ length: recordCount }, (_, i) => {
-    const index = (batch - 1) * (batch === 1 ? 20 : 10) + i + 1;
+    const index = baseOffset + i + 1;
 
     const bookLikes = Math.round(likes * (Math.random() + 0.5));
     const bookReviews =
